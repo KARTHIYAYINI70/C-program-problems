@@ -1,0 +1,28 @@
+// Find simple interest
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+   	
+	float i,p,r,n;
+ 	clrscr();
+   	printf("enter the value p:\n");
+   	scanf("%f",&p);
+   	printf("enter the value r:\n");
+   	scanf("%f",&r);
+   	printf("enter the value n:\n");
+   	scanf("%f",&n);
+   	i=(p*r*n)/100;
+   	printf("Interest::%f",i);
+   	getch();
+}
+
+Output:
+	enter the value of p:
+	1200
+	enter the value of r:
+	1.2
+	enter the value of n:
+	3
+	Interest::43.2
