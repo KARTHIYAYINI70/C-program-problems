@@ -1,0 +1,34 @@
+// Swapping of two number using third variable
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int a,b,temp;
+  clrscr();
+     printf("\nEnter the value of A\n");
+     scanf("%d",&a);
+     printf("\nEnter the value of B\n");
+     scanf("%d",&b);
+     clrscr();
+     printf("\nBefore swapping\n");
+     printf("A::%d\nB::%d",a,b);
+     temp=a;
+     a=b;
+     b=temp;
+     printf("\nAfter swapping\n");
+     printf("A::%d\nB::%d",a,b);
+getch();
+}
+
+Output:
+        Enter the value of A
+	25
+	Enter the value of B
+	20  
+	Before swapping
+	A::25
+	B::20
+	After swapping	
+	A::20
+	B::25
