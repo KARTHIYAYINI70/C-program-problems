@@ -1,0 +1,26 @@
+// Find volume of cube
+
+#include<stdio.h>
+#include<conio.h>
+{
+	int l,b,h,v;
+ 	clrscr();
+ 	printf("enter the value of l:\n");
+ 	scanf("%d",&l);
+ 	printf("enter the value of b:\n");
+ 	scanf("%d",&b);
+	printf("enter the value of h:\n");
+ 	scanf("%d",&h);
+	v=l*b*h;
+ 	printf("Volume Of Cube::%d",v);
+ 	getch();
+}
+
+Output:
+	enter the value of l:
+	10
+	enter the value of b:
+	10
+	enter the value of h:
+	10
+	volume of Cube:1000
