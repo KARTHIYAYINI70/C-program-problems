@@ -1,0 +1,26 @@
+// Example show Use of Putchar
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  char a,b;
+  clrscr();
+   printf("\nEnter one lowercase character\n");
+   a=getchar();
+   printf("Lowercase character is ==>");
+   putchar(a);
+   printf("\n\nCharacter in uppercase ==>");
+   putchar(a-32);
+
+getch();
+}
+
+Output:
+
+        Enter one lowercase character
+	n
+	Lowercase character is ==>
+	n
+	Character in uppercase ==>
+	N
