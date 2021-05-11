@@ -1,0 +1,40 @@
+//Arithmetic operators
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+	int  a = 2, b = 3;
+  	int  sum, sub, mul, rem, idiv ;
+  	float  rdiv;
+	clrscr();
+
+  	sum = a + b;
+  	sub = a - b;
+  	mul = a * b;
+  	idiv = a / b;
+	rem = a % b;
+  	rdiv = (float)a / (float)b;
+  	
+
+	printf( "\n sum = %d", sum );
+	printf( "\n sub = %d", sub );
+	printf( "\n mul = %d", mul );
+	printf( "\n idiv = %d", idiv );
+	printf( "\n rem = %d", rem );
+  	printf( "\n rdiv = %f", rdiv );
+
+	getch();
+	return 0;
+}
+
+Output:
+
+ sum = 5
+ sub = -1
+ mul = 6
+ idiv = 0
+ rem = 2
+ rdiv = 0.666667
+
