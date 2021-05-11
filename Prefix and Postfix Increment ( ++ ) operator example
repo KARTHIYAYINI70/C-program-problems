@@ -1,0 +1,27 @@
+//Prefix and Postfix Increment ( ++ ) operator
+
+#include <stdio.h>
+#include <conio.h>
+
+int main( )
+{
+	int  a = 10, b;
+	clrscr();
+
+	b = ++a;
+	printf( "\n After Prefix Increment  : " );
+	printf( " a = %d and b = %d", a, b);
+
+	a = 10;
+	b = a++;
+	printf( "\n After Postfix Increment : " );
+	printf( " a = %d and b = %d", a, b);
+
+	getch();
+	return 0;
+}
+
+Output:
+
+ After Prefix Increment  : a = 11 and b = 11
+ After Postfix Increment : a = 11 and b = 10
