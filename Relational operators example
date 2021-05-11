@@ -1,0 +1,32 @@
+//Relational Operators
+
+#include <stdio.h> 
+#include <conio.h>
+ 
+int  main() 
+{ 
+	int n;
+	clrscr();
+
+	printf( "\n Enter any Number : " );
+	scanf( "%d", &n );
+
+	printf( "\n (n < 10) is = %d", (n < 10) );
+	printf( "\n (n > 10) is = %d", (n > 10) );
+	printf( "\n (n <= 10) is = %d", (n <= 10) );
+	printf( "\n (n >= 10) is = %d", (n >= 10) );
+	printf( "\n (n == 10) is = %d", (n == 10) );
+	printf( "\n (n != 10) is = %d", (n != 10) );
+
+	getch();
+	return 0;
+}
+
+Output:
+
+ (n < 10) is = 0
+ (n > 10) is = 0
+ (n <= 10) is = 1
+ (n >= 10) is = 1
+ (n == 10) is = 1
+ (n != 10) is = 0
