@@ -1,0 +1,32 @@
+//Adam Number or Not
+#include<stdio.h> 
+int main() 
+{
+    int num; 
+    scanf("%d",&num); //12 
+    int sq1,sq2,rev1=0,rev2=0,rem; 
+    sq1=num*num; //sq1=144 
+    while(num!=0)
+    {
+        rem=num%10;
+        rev1=rev1*10+rem;
+        num=num/10;
+    } 
+    //rev1=21  
+    sq2=rev1*rev1; //sq2=21*21=441 
+    while(sq2!=0)
+    {
+        rem=sq2%10;
+        rev2=rev2*10+rem;
+        sq2=sq2/10;
+    }
+    //rev2=144 
+    if(sq1==rev2)
+    {
+      printf("Adam Number");  
+    }
+    else
+{
+    printf("not a adam number ") ;
+}
+}
