@@ -1,0 +1,25 @@
+//check wheather the given number is duck number or not 
+#include<stdio.h> 
+int main()
+{
+    int num;
+    scanf("%d",&num); //120 
+    int flag=0;
+    while(num!=0) //120!=0 
+    {
+        rem=num%10; //rem=0 
+        if(rem==0) //0==0 
+        {
+            flag=1; //flag=1;
+            break; 
+        }
+    }
+    if(flag==1)
+    {
+        printf("Duck Number");
+    }
+    else 
+    {
+        printf("Not a Duck Number");
+    }
+}
