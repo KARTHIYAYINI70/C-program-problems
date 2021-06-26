@@ -1,0 +1,24 @@
+//Left to Right destruction 
+#include<stdio.h>
+#include<math.h> 
+int main()
+{
+    int num,rem;
+    scanf("%d",&num); //1234;
+    int count=0;
+    int temp=num; 
+    while(num!=0)
+    {
+        count++;   
+        num=num/10; 
+    }
+    //num=0 
+    int pv=pow(10,count-1);
+   while(pv!=0)
+   {
+     rem=(temp/pv)%10; 
+     printf("%d ",rem); 
+     pv=pv/10;
+   }
+    
+}
