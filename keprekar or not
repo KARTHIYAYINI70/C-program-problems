@@ -1,0 +1,28 @@
+//keprekar or not 
+#include<stdio.h> 
+int main()
+{
+    long int n,count;
+    scanf("%ld%n",&n,&count); //2223 
+    long int sq,sum; 
+    sq=n*n;  //sq=2223*2223 = 4941729 
+    int pv=10,flag=0;
+    for(int i=1;i<=count;i++)
+    {
+      sum=(sq/pv)+(sq%pv); 
+      if(sum==n)
+      {
+        flag=1;
+        break;
+      }
+      pv=pv*10;
+    }
+    if(flag==1)
+    {
+        printf("Keprekar number");
+    }
+    else 
+    {
+        printf("Not a Keprekar number");
+    }
+}
