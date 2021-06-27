@@ -1,0 +1,25 @@
+//disarium number 
+#include<stdio.h> 
+#include<math.h> 
+int main() 
+{
+    int num,count; 
+    scanf("%d%n",&num,&count); //num=135,count=3  
+    int rem,sum=0; 
+    int temp=num; 
+    while(num!=0)
+    {
+        rem=num%10; //rem= 1    
+        sum=sum+pow(rem,count); //sum=135 
+        count--; //0   
+        num=num/10; //num=0 
+    }
+    if(sum==temp)
+    {
+        printf("Disarium Number");
+    }
+    else 
+    {
+        printf("Not a Disarium Number"); 
+    }
+}
