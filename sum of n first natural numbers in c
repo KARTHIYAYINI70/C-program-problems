@@ -1,0 +1,16 @@
+//sum of n first natural numbers 
+#include<stdio.h>
+int findSum(int n)  //n=5     1+2+3+4+5  =15 
+{
+int sum = 0; 
+for (int x=1; x<=n; x++) //x=1 ; 6<=5 ; 6
+sum = sum + x;    //sum= 15  
+return sum; 
+}
+int main()
+{
+int n;
+scanf("%d",&n);  //5 
+printf("%d",findSum(n)); //15 
+return 0;
+}
