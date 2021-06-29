@@ -1,0 +1,35 @@
+//mirror image 
+#include<stdio.h> 
+#include<string.h> 
+int main()
+{
+    char str1[1000],str2[1000];  
+    scanf("%s %s",str1,str2); //karikalan  kalankari 
+    int len=strlen(str1); 
+    int j,i,flag=0; 
+    for(j=1;j<=len;j++)
+    {
+        char temp=str1[len-1]; 
+        for(i=len-1;i>=1;i--)
+        {
+            str1[i]=str1[i-1];
+        }
+        str1[0]=temp;
+        int k=strcmp(str1,str2); 
+        if(k==0)
+        {
+          flag=1;
+          break;
+        }
+        
+    }
+if(flag==1)
+    {
+        printf("Mirror image");
+    }
+    else 
+    {
+        printf("Not");
+    }
+    
+}
