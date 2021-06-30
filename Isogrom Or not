@@ -1,0 +1,25 @@
+#include<stdio.h> 
+int main()
+{
+    char str[1000];
+    scanf("%[^\n]",str); 
+    int arr[26]={0}; 
+    int i,flag=0; 
+    for(i=0;str[i]!='\0';i++)
+    {
+        int k=str[i]-97;
+        arr[k]++;
+    }
+    for(i=0;i<26;i++)
+    {
+        if(arr[i]>1)
+        {
+         flag=1;
+         break;
+        }
+    }
+    if(flag==0)
+    printf("ISOGRAM");
+    else 
+    printf("NOT ISOGRAM");
+}
