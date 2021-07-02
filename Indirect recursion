@@ -1,0 +1,25 @@
+5)indirect recursion
+n=6 
+#include<stdio.h> 
+void funA(int n) n=2
+{
+if(n>0)  2>0 
+{
+printf("%d "n);   6  2 
+funB(n-1);   funB(1)
+}
+}
+void funB(int n)   n=1
+{
+if(n>1)      1>1 
+{
+printf("%d ",n);     5 
+funA(n/2);  funA(2)
+}
+}
+int main()
+{
+funA(6);
+}
+
+652
