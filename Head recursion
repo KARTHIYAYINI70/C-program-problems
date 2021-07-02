@@ -1,0 +1,17 @@
+2)head recursion
+
+#include<stdio.h>
+void fun(int n)  n=0 
+{
+if(n>0)   0>0 
+{
+fun(n-1);   
+printf("%d ",n);
+}
+}
+int main()
+{
+fun(4);
+}
+
+1   2   3   4 
