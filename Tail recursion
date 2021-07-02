@@ -1,0 +1,17 @@
+1)Tail recursion
+
+#include<stdio.h> 
+void fun(int n)       n=0 
+{
+if(n>0)   0>0
+{
+printf("%d ",n);  
+fun(n-1);
+}
+}
+int main()
+{
+fun(4);
+}
+
+4 3 2 1 
