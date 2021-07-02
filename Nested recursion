@@ -1,0 +1,19 @@
+Nested recursion
+#include<stdio.h>
+int fun(int n)   n=101 
+{
+if(n>100)   101>100 
+{
+return n-10;       91 
+}
+else
+{
+return fun(fun(n+11));
+}
+}
+int main()
+{
+printf("%d",fun(96));
+}
+
+91
