@@ -1,0 +1,20 @@
+//mul*ans 
+#include<stdio.h>
+#include<math.h>
+int fib(int n) //f(n)= O(1)
+{
+  double term_1= (1+sqrt(5))/2.0;  //1 unit
+  term_1=pow(term_1,n);  // 1 unit 
+  double term_2 = (1-sqrt(5))/2.0; // 1 unit 
+  term_2=pow(term_2,n); //1 unit 
+  double ans=term_1-term_2; //1 unit
+  double mul =1.0/sqrt(5); //1unit 
+  return (int)(mul*ans);  // 1 unit 
+  
+}
+int main()
+{
+  int num; 
+  scanf("%d",&num); 
+  printf("%d",fib(num));
+}
