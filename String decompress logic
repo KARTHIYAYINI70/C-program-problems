@@ -1,0 +1,15 @@
+for(i=0;str[i]!='\0'; )				
+{					
+char temp=str[i]; 				
+count=0;					
+i++;				
+while(str[i]>='0'&&str[i]<='9')					
+{					
+count=count*10+(str[i]-48);			
+i++;	5				
+}					
+for(j=1;j<=count;j++)					
+{					
+printf("%c",temp);					
+}					
+}					
