@@ -1,0 +1,25 @@
+#include<stdio.h> 
+int main() 
+{
+    long int N=625; 
+    long int power=1,flag=0; 
+    for(long int i=1;i<N;i++)
+    {
+        power=power*5; 
+        if(power==N)
+        {
+           flag=1;
+           break;
+        }
+    }
+    if(flag==1)
+    {
+        printf("Yes");
+    }
+    else 
+    {
+        printf("No");
+    }
+   
+   
+}
