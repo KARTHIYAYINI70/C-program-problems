@@ -1,0 +1,32 @@
+#include<stdio.h> 
+int main() 
+{
+    char str[]={"i         live     on       earth"};  
+    int i,safe,count=0; 
+    for(i=0,safe=0;str[i]!='\0';)
+    {
+        if(str[i]==' ')
+        {
+           while(str[i]==' ')
+           {
+               i++;
+           }
+           count++;
+        }
+        else 
+        {
+            if(count!=0) //safe=2, i=5 
+            {
+                str[safe++]=' '; //safe=3 
+            }
+            while(str[i]!=' '&&str[i]!='\0')
+            {
+                str[safe]=str[i]; 
+                safe++; 
+                i++;
+            }
+        }
+    }
+    str[safe]='\0'; 
+    printf("%s",str);
+}
