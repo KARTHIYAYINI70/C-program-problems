@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+int n;
+scanf("%d",&n);  //5
+int row,col,val;
+for(row=1;row<=n;row=row+2)
+{
+val=(row-1)*n+1;  //val=
+for(col=1;col<=n;col++)
+{
+printf("%d ",val);  
+val++;   // 5
+}
+printf("\n");
+}
+for(row=n;row>=1;row--)
+{
+if(row%2==0)
+{
+val=(row-1)*n+1;  //val=16
+for(col=1;col<=n;col++)
+{
+printf("%d ",val);  
+val++;   // 5
+}
+printf("\n");
+}
+}
+}
