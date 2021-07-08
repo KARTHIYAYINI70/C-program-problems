@@ -1,0 +1,32 @@
+//swap alternative digit 
+#include<stdio.h> 
+int main()
+{
+    int num,count; 
+    scanf("%d%n",&num,&count); //n=12456  count=5 
+    int rem,pv=1,r,swap,sum=0;
+    if(count%2==1)
+    {
+        rem=num%10;   //rem=6 
+        num=num/10; //num=1245
+    }
+    while(num!=0)
+    {
+       r=num%100;   //r=12   
+       swap=(r%10)*10+r/10; //  21 
+       sum=sum+(swap*pv);   //sum=0+(54*1);  sum=2154 
+       pv=pv*100; // pv=1000 
+       num=num/100; //num=0 
+    }
+    if(count%2==1)
+    {
+        printf("%d%d",sum,rem);
+    }
+    else 
+    {
+        printf("%d",sum); 
+    }
+    
+    
+    
+}
