@@ -1,0 +1,10 @@
+//Print the maximum and minimum value of unsigned integer 
+#include<stdio.h> 
+#include<limits.h> 
+int main()
+{
+    unsigned int min,max; 
+    min=0; 
+    max=UINT_MAX; 
+    printf("min = %u\nmax = %u",min,max);
+}
