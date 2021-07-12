@@ -1,0 +1,57 @@
+//pattern36
+
+#include<stdio.h>
+
+int main()
+{
+	int height=5;
+	int lenght = 4;
+	int i,j,k;
+	
+	int is = 1;// inner space
+	int os = 2; // outer space
+	
+	int inc = 1;
+	int jump = (height*3)-(height+1);
+	int ch = 'a' + height-1;
+	
+	for(i=1;i<=height;i++){
+		for(j=1;j<=lenght;j++){
+			for(k=1;k<=os;k++){
+				printf(" ");
+			}
+			
+			printf("%c",ch);  // put any symbol
+			
+			for(k=1;k<=is;k++){
+				printf(" ");
+			}
+			 
+			ch+=inc;
+			
+			if(ch>'z')
+				ch-=26;
+				
+			printf("%c",ch);  // put any symbol
+			
+			for(k=1;k<=os;k++){
+				printf(" ");
+			}
+			printf(" ");
+			ch+=jump;
+			
+			if(ch>'z')
+				ch-=26;
+		}
+		os = (i+1!=height)?1:0;
+			
+		is = (i+1!=height)?3:5;
+		
+		ch = 'a'+height - i - 1;
+		inc+=2;
+		jump -=2;	
+		printf("\n");
+	}
+	return 0;
+}
+ 
