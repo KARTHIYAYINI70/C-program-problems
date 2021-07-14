@@ -1,0 +1,59 @@
+#include<stdio.h> 
+int main()
+{
+    char ch;
+    int n; 
+    scanf("%c %d",&ch,&n);   // ch=c n=2    
+    char c[3][20]={"Espresso Coffee","Cappuccino Coffee","Latte coffee"}; 
+    char t[8][30]={"Plain Tea","Assam Tea","Ginger Tea","Cardamom Tea","Masala Tea","Lemon Tea","Green Tea","Organic Darjeeling Tea"};
+    char s[4][30]={"Hot and Sour Soup","Veg Corn Soup","Tomato Soup","Spicy Tomato Soup"};
+  char b[6][30]={"Hot Chocolate Drink","Badam Drink","Badam-Pista Drink","Mango juice","Lemon juice","Orange juice"};
+    if(ch=='c')
+    {
+     if(n>=1&&n<=3)
+     {
+         printf("Welcome to GCD!\n"); 
+         printf("Enjoy your %s",c[n-1]);
+     }
+     else 
+     {
+         printf("Ivalid Output");
+     }
+    }
+    else if(ch=='t')
+    {
+        if(n>=1&&n<=8)
+        {
+            printf("Welcome to GCD!\n"); 
+         printf("Enjoy your %s",t[n-1]);
+        }
+      else 
+        {
+            printf("Invalid Output");
+        }
+    }
+    else if(ch=='s')
+    {
+        if(n>=1&&n<=4)
+        {
+            printf("Welcome to GCD!\n"); 
+         printf("Enjoy your %s",s[n-1]);
+        }
+        else 
+        {
+            printf("Invalid Output");
+        }
+    }
+    else 
+    {
+        if(n>=1&&n<=6)
+        {
+            printf("Welcome to GCD!\n"); 
+         printf("Enjoy your %s",b[n-1]);
+        }
+        else 
+        {
+            printf("Invalid Output");
+        }
+    }
+}
