@@ -1,0 +1,45 @@
+//find the length of the longest common subsequence 
+#include<stdio.h> 
+#include<string.h>
+int max(int n1,int n2)
+{
+    if(n1>n2)
+    {
+        return n1;
+    }
+    else 
+    {
+        return n2;
+    }
+}
+int main()
+{
+    char str1[1000],str2[1000]; 
+    scanf("%s %s",&str1,&str2); //abc bdc 
+    int len1,len2; 
+    len1=strlen(str1); //len1=3 
+    len2=strlen(str2); //len2=3 
+    int mat[len1+1][len2+1];
+    int i,j; 
+    for(i=0;i<=len1;i++)   //i=1  
+    {
+       for(j=0;j<=len2;j++) //j=1    
+        if(i==0||j==0) //0==1 || 1==0 
+           {
+               mat[i][j]=0; //mat[1][0]=0 
+           }
+           else if(str1[i-1]==str2[j-1])
+           {
+               mat[i][j]=mat[i-1][j-1]+1;
+           }
+           else
+           {
+              mat[i][j]= max(mat[i][j-1],mat[i-1][j]);
+           }
+       }
+    }
+    printf("length of the LCS is %d",mat[len1][len2]);
+     
+     
+    
+}
