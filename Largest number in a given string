@@ -1,0 +1,60 @@
+Bastin once had trouble finding the numbers in a string. The numbers are distributed in a string across various test cases. 
+There are various numbers in each test case you need to find the number in each test case. Each test case has various numbers in sequence.
+You need to find only those numbers which do not contain 9. For eg, if the string contains "hello this is alpha 5051 and 9475".
+You will extract 5051 and not 9475. You need only those numbers which are consecutive and you need to help 
+him find the numbers.
+Print the largest number.
+
+Note: Use long long for storing the numbers from the string.
+
+
+
+
+
+#include<stdio.h> 
+int main()
+{
+    int n; 
+    scanf("%d ",&n);//n=2    
+    char str[100][100];
+   for(int i=0;i<n;i++)
+    {
+      scanf("%[^\n]%*c",&str[i]);
+
+    }
+    int j,k,count,max=-1; 
+    for(j=0;j<n;j++) 
+    {
+        for(k=0;str[j][k]!='\0';k++) 
+        {
+          count=0; 
+          while(str[j][k]>='0'&&str[j][k]<='9') 
+          {
+              count=count*10+(str[j][k]-48);  
+              k++; 
+          }
+          if(max<count) //-1<234
+          {int temp=count;//temp=234 
+              int f=0;
+              while(temp!=0)
+              {
+                  if(temp%10==9)
+                  {
+                      f=1;
+                      break;
+                  }
+                  temp=temp/10;
+              }
+              if(f==0)
+              {
+                  max=count;
+              }
+              
+              
+          }
+            
+        }
+        printf("%d \n",max); 
+        max=-1;
+    }
+}
