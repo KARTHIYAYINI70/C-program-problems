@@ -1,0 +1,47 @@
+#include<stdio.h> 
+int main()
+{
+    int n; 
+    scanf("%d ",&n);//n=2    
+    char str[100][100];
+   for(int i=0;i<n;i++)
+    {
+      scanf("%[^\n]%*c",&str[i]);
+
+    }
+    int j,k,count,max=-1; 
+    for(j=0;j<n;j++) 
+    {
+        for(k=0;str[j][k]!='\0';k++) 
+        {
+          count=0; 
+          while(str[j][k]>='0'&&str[j][k]<='9') 
+          {
+              count=count*10+(str[j][k]-48);  
+              k++; 
+          }
+          if(max<count) //-1<234
+nt temp=count;//temp=234 
+              int f=0;
+              while(temp!=0)
+              {
+                  if(temp%10==9)
+                  {
+                      f=1;
+                      break;
+                  }
+                  temp=temp/10;
+              }
+              if(f==0)
+              {
+                  max=count;
+              }
+              
+              
+          }
+            
+        }
+        printf("%d \n",max); 
+        max=-1;
+    }
+}
